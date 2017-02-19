@@ -1,0 +1,4 @@
+- make heatmap work
+- extract HOG only once and subsample feature vector for each window
+- assemble video pipeline
+- handle time series data (manually split into training and test)

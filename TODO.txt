@@ -2,3 +2,4 @@
 - extract HOG only once and subsample feature vector for each window
 - assemble video pipeline
 - handle time series data (manually split into training and test)
+- https://carnd-forums.udacity.com/questions/36061571/how-to-reduce-false-positives

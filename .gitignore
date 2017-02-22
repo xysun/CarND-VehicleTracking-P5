@@ -4,3 +4,4 @@ non-vehicles.zip
 vehicles.zip
 *.swp
 .ipynb_checkpoints/
+output_sequence/

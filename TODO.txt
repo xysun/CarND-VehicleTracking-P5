@@ -3,3 +3,11 @@
 - assemble video pipeline
 - handle time series data (manually split into training and test)
 - https://carnd-forums.udacity.com/questions/36061571/how-to-reduce-false-positives
+- try HOG on all channels (especially situation like frame 250)
+- verify video dimensions
+- dynamic frame window
+- cross validation
+- predictions = (clf.decision_function(test_features) > your_positive_distance-threshold_of_positivelabel_to_bounary).astype(np.uint8)
+- you can set your_positive_distance-threshold_of_positivelabel_to_bounary = 2 for example
+- cross image heatmap (running average of 5 images)
+- hot subsampling window

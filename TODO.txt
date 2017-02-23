@@ -6,6 +6,7 @@
 - try HOG on all channels (especially situation like frame 250)
 - verify video dimensions
 - dynamic frame window
+
 - cross validation
 - predictions = (clf.decision_function(test_features) > your_positive_distance-threshold_of_positivelabel_to_bounary).astype(np.uint8)
 - you can set your_positive_distance-threshold_of_positivelabel_to_bounary = 2 for example

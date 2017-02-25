@@ -12,3 +12,5 @@
 - you can set your_positive_distance-threshold_of_positivelabel_to_bounary = 2 for example
 - cross image heatmap (running average of 5 images)
 - hot subsampling window
+
+The larger windows closer to the driver and the smaller closer to the horizon

@@ -350,6 +350,11 @@ img {
 <p>I used Python's <code>multiprocessing</code> module to speed up subsampling of HOG features, using a <code>Pool</code> of 12 threads. The parallel code can be found in function <code>find_cars</code>, specifically this line: </p>
 <p><code>pool.map(partial(hog_parallel.get_hog_feature_parallel, hogs = [hog1], nblocks_per_window = nblocks_per_window), fs)</code></p>
 <p>where <code>hog_parallel</code> is a separate Python module (see <code>hog_parallel.py</code> file) I imported into notebook to work around the issue that iPython notebook does not support <code>multiprocessing</code> out of box on Windows. </p>
+<p>As to the classifier performance, I did mainly two things: </p>
+<ul>
+<li>include HOG + color + spatial features as feature vector</li>
+<li>use <code>svm.decision_function()</code> and only take predictions when <code>decision_function() &gt; 2</code>. This ensures I'm only taking high-confident predictions and reduce false positives.  </li>
+</ul>
 <hr />
 <h3>Video Implementation</h3>
 <h4>1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)</h4>

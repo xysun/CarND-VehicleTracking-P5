@@ -122,6 +122,11 @@ pool.map(partial(hog_parallel.get_hog_feature_parallel, hogs = [hog1], nblocks_p
 
 where `hog_parallel` is a separate Python module (see `hog_parallel.py` file) I imported into notebook to work around the issue that iPython notebook does not support `multiprocessing` out of box on Windows. 
 
+As to the classifier performance, I did mainly two things: 
+
+- include HOG + color + spatial features as feature vector
+- use `svm.decision_function()` and only take predictions when `decision_function() > 2`. This ensures I'm only taking high-confident predictions and reduce false positives.  
+
 ---
 
 ### Video Implementation

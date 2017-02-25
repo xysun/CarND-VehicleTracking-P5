@@ -5,7 +5,10 @@ vehicles.zip
 *.swp
 .ipynb_checkpoints/
 output_sequence/
-output_sequence_all
+output_sequence_all/
+output_sequence_3/
+submission/
+submission.zip
 *.mp4
 test_images/
 output_sequence_all_2/
